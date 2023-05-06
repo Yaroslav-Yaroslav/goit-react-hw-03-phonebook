@@ -10,9 +10,7 @@ export class App extends Component {
     filter: '',
   };
   componentDidMount() {
-    console.log('componentDidMount');
     const savedContacts = localStorage.getItem('contacts');
-    console.log('savedContacts:', savedContacts);
     if (savedContacts !== null) {
       this.setState({ contacts: JSON.parse(savedContacts) });
     }
